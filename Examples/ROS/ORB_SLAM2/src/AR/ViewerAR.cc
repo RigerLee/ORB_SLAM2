@@ -404,6 +404,7 @@ Plane* ViewerAR::DetectPlane(const cv::Mat Tcw, const std::vector<MapPoint*> &vM
         {
             if(pMP->Observations()>5)
             {
+                //储存track>5的 地图点世界坐标 和对应的 地图点类
                 vPoints.push_back(pMP->GetWorldPos());
                 vPointMP.push_back(pMP);
             }
